@@ -1,0 +1,152 @@
+:root {
+    --lib-dark: #1e3a5f;
+    --lib-blue: #2563eb;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #f0f4f8;
+    color: #1a1a1a;
+}
+
+h1,
+h2,
+h3,
+.serif {
+    font-family: 'Playfair Display', serif;
+}
+
+h3 {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+.text-lib-blue {
+    color: var(--lib-blue);
+}
+
+.hero-gradient {
+    background: linear-gradient(rgba(30, 58, 95, 0.72), rgba(30, 58, 95, 0.88)),
+        url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=1600');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Acessibilidade: Painel */
+.accessibility-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.acc-button {
+    background: var(--lib-dark);
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.acc-panel {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    color: #1a202c;
+}
+
+.acc-panel.show {
+    display: block;
+}
+
+.acc-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.btn-small {
+    background: #dbeafe;
+    color: #1e3a5f;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #f7fafc;
+}
+
+.dark-mode .acc-panel {
+    background: #1e1e1e;
+    color: white;
+    border-color: #333;
+}
+
+.dark-mode .btn-small {
+    background: #333;
+    color: white;
+}
+
+.dark-mode .bg-white {
+    background-color: #1a1a1a !important;
+}
+
+.dark-mode .bg-gray-50 {
+    background-color: #242424 !important;
+}
+
+.text-gray-700 {
+    color: #333333 !important;
+}
+
+.dark-mode .text-gray-600,
+.dark-mode .text-gray-700 {
+    color: #cbd5e0 !important;
+}
+
+.dark-mode .text-lib-blue {
+    color: #60a5fa;
+}
+
+
+h3 {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+.dark-mode h3 {
+    color: #ffffff !important;
+}
+
+/* Animações Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Destaque na Leitura */
+.reading-active {
+    outline: 3px solid var(--lib-blue);
+    background: rgba(37, 99, 235, 0.12);
+}
